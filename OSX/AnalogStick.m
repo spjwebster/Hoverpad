@@ -9,11 +9,12 @@
 #import "AnalogStick.h"
 
 #import "VHIDDevice.h"
-#import <WirtualJoy/WJoyDevice.h>
+#import "FoohidDevice.h"
+//#import <WirtualJoy/WJoyDevice.h>
 
 @interface AnalogStick () <VHIDDeviceDelegate>{
     VHIDDevice *joystickDescription;
-    WJoyDevice *virtualJoystick;
+    FoohidDevice *virtualJoystick;
 }
 
 @end
@@ -36,15 +37,14 @@
 }
 
 -(void) createVirtualJoystick{
-    joystickDescription = [[VHIDDevice alloc] initWithType:VHIDDeviceTypeJoystick pointerCount:4 buttonCount:1 isRelative:NO];
+    joystickDescription = [[VHIDDevice alloc] initWithType:VHIDDeviceTypeJoystick pointerCount:2 buttonCount:1 isRelative:NO];
     [joystickDescription setDelegate:self];
 //    NSLog(@"%@",[joystickDescription descriptor]);
 //    virtualJoystick = [[WJoyDevice alloc] initWithHIDDescriptor:[joystickDescription descriptor] productString:@"BLE Joystick"];
-    virtualJoystick = [[WJoyDevice alloc] initWithHIDDescriptor:[joystickDescription descriptor] properties:
-                       @{WJoyDeviceProductStringKey : @"iOSVirtualJoystick",
-                         WJoyDeviceSerialNumberStringKey : @"556378",
-                         WJoyDeviceVendorIDKey : [NSNumber numberWithUnsignedInt:1133],
-                         WJoyDeviceProductIDKey : [NSNumber numberWithUnsignedInt:512]}];
+    virtualJoystick = [
+        [FoohidDevice alloc] initWithHIDDescriptor:[joystickDescription descriptor]
+                                              name:@"iOSVirtualFoostick"
+    ];
     
 }
 -(void) destroyVirtualJoystick{

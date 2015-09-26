@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A433575C1BB488AD00248F51 /* FoohidDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = A433575B1BB488AD00248F51 /* FoohidDevice.m */; settings = {ASSET_TAGS = (); }; };
+		A433575F1BB48B3300248F51 /* FoohidDeviceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A433575E1BB48B3300248F51 /* FoohidDeviceImpl.m */; settings = {ASSET_TAGS = (); }; };
 		D505A3B119DAF6C500278548 /* VHIDButtonCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D505A3AC19DAF6C500278548 /* VHIDButtonCollection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D505A3B219DAF6C500278548 /* VHIDDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D505A3AE19DAF6C500278548 /* VHIDDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D505A3B319DAF6C500278548 /* VHIDPointerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D505A3B019DAF6C500278548 /* VHIDPointerCollection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -72,6 +74,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A433575B1BB488AD00248F51 /* FoohidDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoohidDevice.m; path = OSX/Foohid/FoohidDevice.m; sourceTree = SOURCE_ROOT; };
+		A433575D1BB48AAA00248F51 /* FoohidDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoohidDevice.h; path = OSX/Foohid/FoohidDevice.h; sourceTree = SOURCE_ROOT; };
+		A433575E1BB48B3300248F51 /* FoohidDeviceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoohidDeviceImpl.m; path = OSX/Foohid/FoohidDeviceImpl.m; sourceTree = SOURCE_ROOT; };
+		A43357601BB48B5000248F51 /* FoohidDeviceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoohidDeviceImpl.h; path = OSX/Foohid/FoohidDeviceImpl.h; sourceTree = SOURCE_ROOT; };
 		D505A38619DAF62C00278548 /* WirtualJoy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WirtualJoy.xcodeproj; path = WJoy/WirtualJoy/WirtualJoy.xcodeproj; sourceTree = "<group>"; };
 		D505A3AB19DAF6C500278548 /* VHIDButtonCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VHIDButtonCollection.h; path = WJoy/VHID/VHIDButtonCollection.h; sourceTree = SOURCE_ROOT; };
 		D505A3AC19DAF6C500278548 /* VHIDButtonCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VHIDButtonCollection.m; path = WJoy/VHID/VHIDButtonCollection.m; sourceTree = SOURCE_ROOT; };
@@ -169,6 +175,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A433575A1BB4884400248F51 /* Foohid */ = {
+			isa = PBXGroup;
+			children = (
+				A433575B1BB488AD00248F51 /* FoohidDevice.m */,
+				A433575D1BB48AAA00248F51 /* FoohidDevice.h */,
+				A433575E1BB48B3300248F51 /* FoohidDeviceImpl.m */,
+				A43357601BB48B5000248F51 /* FoohidDeviceImpl.h */,
+			);
+			name = Foohid;
+			sourceTree = "<group>";
+		};
 		D505A38719DAF62C00278548 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +260,7 @@
 				D531A5DB19EEC97200F38A40 /* Views */,
 				D5959DB619DBBD7800E5C7A3 /* Images.xcassets */,
 				D505A3B419DAF6C800278548 /* VHID */,
+				A433575A1BB4884400248F51 /* Foohid */,
 				D552052519D5C769006CF417 /* Supporting Files */,
 			);
 			name = OSX;
@@ -480,8 +498,10 @@
 				D5959DA619DBBCD500E5C7A3 /* main.m in Sources */,
 				D5959DAD19DBBCE500E5C7A3 /* AppDelegate.m in Sources */,
 				D531A5D719EEC96C00F38A40 /* BLEManager.m in Sources */,
+				A433575F1BB48B3300248F51 /* FoohidDeviceImpl.m in Sources */,
 				D5959DAF19DBBCE500E5C7A3 /* OrientationView.m in Sources */,
 				D5959DAE19DBBCE500E5C7A3 /* StatusView.m in Sources */,
+				A433575C1BB488AD00248F51 /* FoohidDevice.m in Sources */,
 				D5722EF519E393FD009C11AB /* SmallModelView.m in Sources */,
 				D531A5E119EF2A5D00F38A40 /* AnalogStick.m in Sources */,
 				D505A3B319DAF6C500278548 /* VHIDPointerCollection.m in Sources */,
