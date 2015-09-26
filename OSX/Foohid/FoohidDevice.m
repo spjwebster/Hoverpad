@@ -43,7 +43,6 @@
 }
 
 - (BOOL)updateHIDState:(NSData*)HIDState {
-    NSLog(@"FoohidDevice updateHIDState:%@", [HIDState description]);
     return [m_Impl send:HIDState];
 }
 
