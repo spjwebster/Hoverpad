@@ -45,40 +45,14 @@
 		D59EF66019FF59A20045EB1C /* ConnectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D59EF65F19FF59A20045EB1C /* ConnectionCell.m */; };
 		D5B5EF7819E701AC00FD99AD /* ScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B5EF7719E701AC00FD99AD /* ScreenView.m */; };
 		D5D8B43119EF503900EFBC1F /* BLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D8B43019EF503900EFBC1F /* BLEPeripheral.m */; };
-		D5E7B43819E5F505005D36E6 /* WirtualJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D505A3A819DAF62C00278548 /* WirtualJoy.framework */; };
 		D5F2FF3F19FE9D480037F4C7 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2FF3E19FE9D480037F4C7 /* DetailCell.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D505A3A319DAF62C00278548 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D505A38619DAF62C00278548 /* WirtualJoy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 32D94FD00562CBF700B6AF17;
-			remoteInfo = wjoy;
-		};
-		D505A3A519DAF62C00278548 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D505A38619DAF62C00278548 /* WirtualJoy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A46958E15B58CE1003AB8FD;
-			remoteInfo = WJoyTool;
-		};
-		D505A3A719DAF62C00278548 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D505A38619DAF62C00278548 /* WirtualJoy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A46960715B593A2003AB8FD;
-			remoteInfo = WirtualJoy;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A433575B1BB488AD00248F51 /* FoohidDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoohidDevice.m; path = OSX/Foohid/FoohidDevice.m; sourceTree = SOURCE_ROOT; };
 		A433575D1BB48AAA00248F51 /* FoohidDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoohidDevice.h; path = OSX/Foohid/FoohidDevice.h; sourceTree = SOURCE_ROOT; };
 		A433575E1BB48B3300248F51 /* FoohidDeviceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoohidDeviceImpl.m; path = OSX/Foohid/FoohidDeviceImpl.m; sourceTree = SOURCE_ROOT; };
 		A43357601BB48B5000248F51 /* FoohidDeviceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoohidDeviceImpl.h; path = OSX/Foohid/FoohidDeviceImpl.h; sourceTree = SOURCE_ROOT; };
-		D505A38619DAF62C00278548 /* WirtualJoy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WirtualJoy.xcodeproj; path = WJoy/WirtualJoy/WirtualJoy.xcodeproj; sourceTree = "<group>"; };
 		D505A3AB19DAF6C500278548 /* VHIDButtonCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VHIDButtonCollection.h; path = WJoy/VHID/VHIDButtonCollection.h; sourceTree = SOURCE_ROOT; };
 		D505A3AC19DAF6C500278548 /* VHIDButtonCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VHIDButtonCollection.m; path = WJoy/VHID/VHIDButtonCollection.m; sourceTree = SOURCE_ROOT; };
 		D505A3AD19DAF6C500278548 /* VHIDDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VHIDDevice.h; path = WJoy/VHID/VHIDDevice.h; sourceTree = SOURCE_ROOT; };
@@ -155,7 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E7B43819E5F505005D36E6 /* WirtualJoy.framework in Frameworks */,
 				D552051F19D5C769006CF417 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,16 +157,6 @@
 				A43357601BB48B5000248F51 /* FoohidDeviceImpl.h */,
 			);
 			name = Foohid;
-			sourceTree = "<group>";
-		};
-		D505A38719DAF62C00278548 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D505A3A419DAF62C00278548 /* wjoy.kext */,
-				D505A3A619DAF62C00278548 /* WJoyTool */,
-				D505A3A819DAF62C00278548 /* WirtualJoy.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D505A3B419DAF6C800278548 /* VHID */ = {
@@ -300,7 +263,6 @@
 		D568D37B18CBFC4D00ED987D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D505A38619DAF62C00278548 /* WirtualJoy.xcodeproj */,
 				D568D3B918CC014F00ED987D /* CoreMotion.framework */,
 				D568D3B718CC012300ED987D /* CoreBluetooth.framework */,
 				D568D37C18CBFC4D00ED987D /* Foundation.framework */,
@@ -425,12 +387,6 @@
 			mainGroup = D568D37018CBFC4D00ED987D;
 			productRefGroup = D568D37A18CBFC4D00ED987D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D505A38719DAF62C00278548 /* Products */;
-					ProjectRef = D505A38619DAF62C00278548 /* WirtualJoy.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D568D37818CBFC4D00ED987D /* Hoverpad */,
@@ -438,30 +394,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D505A3A419DAF62C00278548 /* wjoy.kext */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = wjoy.kext;
-			remoteRef = D505A3A319DAF62C00278548 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D505A3A619DAF62C00278548 /* WJoyTool */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = WJoyTool;
-			remoteRef = D505A3A519DAF62C00278548 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D505A3A819DAF62C00278548 /* WirtualJoy.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WirtualJoy.framework;
-			remoteRef = D505A3A719DAF62C00278548 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D552051B19D5C769006CF417 /* Resources */ = {
