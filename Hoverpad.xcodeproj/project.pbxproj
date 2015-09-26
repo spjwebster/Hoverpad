@@ -557,6 +557,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OSX/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-U",
+					"-Xlinker",
+					_objc_readClassPair,
+				);
 				PRODUCT_NAME = HoverpadOSX;
 				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
@@ -579,6 +585,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OSX/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-U",
+					"-Xlinker",
+					_objc_readClassPair,
+				);
 				PRODUCT_NAME = HoverpadOSX;
 				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
