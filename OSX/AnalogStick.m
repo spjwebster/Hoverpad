@@ -11,10 +11,13 @@
 #import "VHIDDevice.h"
 #import "FoohidDevice.h"
 //#import <WirtualJoy/WJoyDevice.h>
+#import "Filter.h"
+#import "DoubleExponentialSmoothingFilter.h"
 
 @interface AnalogStick () <VHIDDeviceDelegate>{
     VHIDDevice *joystickDescription;
     FoohidDevice *virtualJoystick;
+    id<Filter> filter;
 }
 
 @end
@@ -32,6 +35,8 @@
         _yawRange = 90;
         _q = malloc(sizeof(float)*4);
         _m = malloc(sizeof(float)*9);
+        
+        filter = [[DoubleExponentialSmoothingFilter alloc] init];
     }
     return self;
 }
@@ -83,6 +88,8 @@
     axis[_pitchAxis] = pitch;
     axis[_rollAxis] = roll;
     axis[_yawAxis] = yaw;
+    
+    [filter applyFilterToAxis:axis];
     
     [joystickDescription setPointer:0 position:CGPointMake(axis[0], axis[1])];
     [joystickDescription setPointer:1 position:CGPointMake(axis[2], 0)];
